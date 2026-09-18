@@ -1,0 +1,2 @@
+ts	source	workspace	smell	n	action	evidence
+2026-09-18T23:43:58.882Z	local	plug-factory	bootstrap-utf8-mangle	1	note	third sighting: install.ps1 UTF-8 mangle in AGENTS/PRIVATE/blueprint; also private-product template language wrong for public repo (adapted)
