@@ -17,5 +17,8 @@ jobs:
         with:
           node-version: 20
       - run: node scripts/check-version-bump.mjs
-# Drift vs the devin pack runs on the devin-factory-plugins side (validate.yml).
-# That repo is private, so this public workflow cannot clone it anonymously.
+      - name: Drift vs the Devin factory pack
+        run: |
+          rm -rf /tmp/devin-factory-plugins
+          git clone --depth 1 https://github.com/Dahhrk/devin-factory-plugins /tmp/devin-factory-plugins
+          node scripts/drift-check.mjs /tmp/devin-factory-plugins
