@@ -1,0 +1,28 @@
+name: Notify plug-factory to sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pstack/**"
+      - "cursor-team-kit/**"
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: repository_dispatch to private twin
+        env:
+          TOKEN: ${{ secrets.PLUG_FACTORY_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${TOKEN:-}" ]; then
+            echo "::warning::PLUG_FACTORY_TOKEN not set on Dahhrk/plugins; skip notify. Hourly sync on plug-factory still runs."
+            exit 0
+          fi
+          curl -fsS -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $TOKEN" \
+            https://api.github.com/repos/Dahhrk/plug-factory/dispatches \
+            -d '{"event_type":"plugins-pack-pushed","client_payload":{"ref":"'"${GITHUB_SHA}"'"}}'
+          echo "Dispatched plugins-pack-pushed to Dahhrk/plug-factory"
