@@ -24,3 +24,4 @@ jobs:
           rm -rf /tmp/devin-factory-plugins
           git clone --depth 1 https://github.com/Dahhrk/devin-factory-plugins /tmp/devin-factory-plugins
           node scripts/drift-check.mjs /tmp/devin-factory-plugins
+          node scripts/drift-check.mjs /tmp/devin-factory-plugins --content || true
