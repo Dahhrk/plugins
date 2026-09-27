@@ -1,6 +1,79 @@
 # Cursor plugins
 
-Official Cursor plugins for popular developer tools, frameworks, and SaaS products. Each plugin is a standalone directory at the repository root with its own `.cursor-plugin/plugin.json` manifest.
+Official Cursor plugins for popular developer tools, frameworks, and SaaS products, plus the public marketplace mirror of factory language kits. Each plugin is a standalone directory at the repository root with its own `.cursor-plugin/plugin.json` manifest.
+
+## Consumer install
+
+This repository is the public install surface for factory language kits (the marketplace mirror set). Pack substance is authored in [`Dahhrk/plug-factory`](https://github.com/Dahhrk/plug-factory); consumers install from here.
+
+### Add this marketplace
+
+1. Open **Customize** in the Cursor sidebar.
+2. Open **Plugins**, then **Import marketplace** (or **Add marketplace**).
+3. Paste the repository URL: `https://github.com/Dahhrk/plugins`
+4. Cursor reads `.cursor-plugin/marketplace.json` and lists the plugins in this repo.
+5. Select a kit (for example `python-kit`) and choose **Install**, then a project or user scope.
+
+Team and Enterprise admins can import the same URL under Dashboard → Plugins & MCPs → Team Marketplaces.
+
+After install, open **Customize** and confirm the kit's skills and rules loaded. Per-kit gates, skills, and escape markers are documented in each kit's own `README.md`.
+
+Local development copy (optional): place a single kit under `~/.cursor/plugins/local/<kit-name>/` with its `.cursor-plugin/plugin.json`, then reload the window. Marketplace installs take precedence when the same name is already installed.
+
+### Language kits (48)
+
+The following language kits are published in this repository (one directory each, listed in `.cursor-plugin/marketplace.json`):
+
+- `ada-kit`
+- `apps-script-kit`
+- `assembly-kit`
+- `astro-kit`
+- `batchfile-kit`
+- `c-kit`
+- `cmake-kit`
+- `cobol-kit`
+- `cpp-kit`
+- `csharp-kit`
+- `css-kit`
+- `delphi-kit`
+- `dockerfile-kit`
+- `elixir-kit`
+- `fortran-kit`
+- `go-kit`
+- `gotemplate-kit`
+- `html-kit`
+- `java-kit`
+- `javascript-kit`
+- `just-kit`
+- `kotlin-kit`
+- `lexyacc-kit`
+- `lua-kit`
+- `makefile-kit`
+- `mako-kit`
+- `mdx-kit`
+- `nix-kit`
+- `objc-kit`
+- `php-kit`
+- `powershell-kit`
+- `pug-kit`
+- `python-kit`
+- `r-kit`
+- `react-kit`
+- `ruby-kit`
+- `rust-kit`
+- `scss-kit`
+- `shell-kit`
+- `slint-kit`
+- `sql-kit`
+- `swift-kit`
+- `tailwind-kit`
+- `typescript-kit`
+- `vbnet-kit`
+- `vite-kit`
+- `wasm-kit`
+- `zig-kit`
+
+Other plugins in this repo (Cursor utilities, third-party integrations) appear in the table below. They are not language kits.
 
 ## Plugins
 
