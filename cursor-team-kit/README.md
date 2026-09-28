@@ -4,7 +4,7 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 **Default:** every non-trivial ask is a one-shot task. Agents start on that route automatically (vague → `poteto-prompt` → `poteto-mode`; structured → `poteto-mode` with Done means + Keep; until-X on Cursor → autonomous-run + built-in `/loop`). Typing `/one-shot-task` is optional; the skill names the contract.
 
-**Prose:** every docs, PR, commit, chat report, and landing line runs through `orwell-prose` (rules 1-12) before delivery. Typing `/orwell-prose` is optional; the skill names the contract. `unslop` and no-em-dash stay secondary.
+**Default (prose):** every docs, PR, commit, chat report, and landing line runs through `orwell-prose` (rules 1-12) before delivery. Agents apply automatically; do not wait to be asked. Typing `/orwell-prose` is optional; the skill names the contract. Same shape as one-shot-task. `unslop` and no-em-dash stay secondary.
 
 ## Installation
 
@@ -19,7 +19,7 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | Skill | Description |
 |:------|:------------|
 | `one-shot-task` | Default entry for every non-trivial ask (named contract; agents start here automatically) |
-| `orwell-prose` | Default plain-writing system for docs, PRs, commits, chat reports, landing copy (rules 1-12; agents apply before delivering prose) |
+| `orwell-prose` | Default writing system for every prose surface (named contract; agents apply automatically, same shape as one-shot-task) |
 | `factory-init` | Onboard a repo into the dark factory (AGENTS, close-loop, gates, then seat kits) |
 | `seat-kit` | Detect languages and seat matching language kits (repo gates + plugin) |
 | `factory-status` | One-table health sweep across factory repos and runners |
