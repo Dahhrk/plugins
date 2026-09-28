@@ -1,8 +1,8 @@
 {
   "name": "cursor-team-kit",
   "displayName": "Cursor Team Kit",
-  "version": "1.2.8",
-  "description": "Internal engineering team workflows for CI, code review, shipping, control-cli, control-ui, verify-this, test reliability, code cleanup, and work summaries. Designed to work without requiring third-party service integrations.",
+  "version": "1.3.0",
+  "description": "Internal engineering team workflows for CI, code review, shipping, factory onboarding, one-shot task default, control-cli, control-ui, verify-this, test reliability, code cleanup, and work summaries. Designed to work without requiring third-party service integrations.",
   "author": {
     "name": "Cursor",
     "email": "plugins@cursor.com"

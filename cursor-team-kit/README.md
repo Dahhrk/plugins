@@ -2,6 +2,8 @@
 
 Internal-style workflows for CI, code review, shipping, and test reliability. The kit is designed to be plug and play without requiring third-party service integrations.
 
+**Default:** every non-trivial ask is a one-shot task. Agents start on that route automatically (vague → `poteto-prompt` → `poteto-mode`; structured → `poteto-mode` with Done means + Keep; until-X on Cursor → autonomous-run + built-in `/loop`). Typing `/one-shot-task` is optional; the skill names the contract.
+
 ## Installation
 
 ```bash
@@ -14,6 +16,11 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 | Skill | Description |
 |:------|:------------|
+| `one-shot-task` | Default entry for every non-trivial ask (named contract; agents start here automatically) |
+| `factory-init` | Onboard a repo into the dark factory (AGENTS, close-loop, gates, then seat kits) |
+| `seat-kit` | Detect languages and seat matching language kits (repo gates + plugin) |
+| `factory-status` | One-table health sweep across factory repos and runners |
+| `merge-queue` | Merge every mergeable open PR across the factory repos (invocation is authorization) |
 | `loop-on-ci` | Watch CI runs and iterate on failures until checks pass |
 | `review-and-ship` | Run a structured review, commit changes, and open a PR |
 | `pr-review-canvas` | Generate an interactive HTML PR walkthrough with annotated, categorized diffs |
@@ -27,7 +34,7 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | `get-pr-comments` | Fetch and summarize review comments from the active pull request |
 | `check-compiler-errors` | Run compile and type-check commands and report failures |
 | `what-did-i-get-done` | Summarize authored commits over a given time period into a concise status update |
-| `weekly-review` | Generate a weekly recap of shipped work with bugfix/tech-debt/net-new highlights |
+| `weekly-review` | Generate a weekly recap of shipped work with bug fix/tech-debt/net-new highlights |
 | `fix-merge-conflicts` | Resolve merge conflicts, validate build/tests, and summarize decisions |
 | `deslop` | Remove AI-generated code slop and clean up code style |
 | `workflow-from-chats` | Extract durable working preferences from chats into skills, rules, or docs |
