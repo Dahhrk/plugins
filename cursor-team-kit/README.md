@@ -6,6 +6,10 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 **Default (prose):** every docs, PR, commit, chat report, and landing line runs through `orwell-prose` (rules 1-12) before delivery. Agents apply automatically; do not wait to be asked. Typing `/orwell-prose` is optional; the skill names the contract. Same shape as one-shot-task. `unslop` and no-em-dash stay secondary.
 
+**Default (UI / Figma):** every `ui:yes` / Figma ask starts from the existing design system plus one approved keyframe, expands the full flow in Figma, proves visual parity, gets a frontend look, then encodes. Fail closed without system, keyframe, or Figma access. Typing `/figma-from-system` is optional; the skill names the contract.
+
+**Default (new product idea):** every new product idea opens a temporary product/design/engineering debate room (plain product name), captures requirements and the decision in writing, then closes the room before encode. Typing `/product-debate` is optional; the skill names the contract.
+
 ## Installation
 
 ```bash
@@ -20,6 +24,8 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 |:------|:------------|
 | `one-shot-task` | Default entry for every non-trivial ask (named contract; agents start here automatically) |
 | `orwell-prose` | Default writing system for every prose surface (named contract; agents apply automatically, same shape as one-shot-task) |
+| `figma-from-system` | Default for ui:yes / Figma work (design system + approved keyframe, fail closed; named contract) |
+| `product-debate` | Default for every new product idea before encode (temporary debate room; named contract) |
 | `factory-init` | Onboard a repo into the dark factory (AGENTS, close-loop, gates, then seat kits) |
 | `seat-kit` | Detect languages and seat matching language kits (repo gates + plugin) |
 | `factory-status` | One-table health sweep across factory repos and runners |
