@@ -19,6 +19,8 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 **Default (post-pass):** if the same manual flow recurred twice, offer skill-authoring / learn-from-demonstration once; drop if declined. Typing `/teach-to-skill` is optional; the skill names the contract.
 
+**Default (leave clean):** kill orphaned local agent children before you stop; mid-session `/leave-machine-clean` reclaims session orphans only. Cap parallel local workstreams; prefer remote for heavy verify. Typing `/leave-machine-clean` is optional; the skill names the contract.
+
 **Default (verify):** falsifiable "done" and substance merge claims need fresh `verify-this` evidence before ship.
 
 ## Installation
@@ -41,6 +43,7 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | `results-not-homework` | EXIT check: leave a mergeable artifact; never end with homework (named contract) |
 | `fleet-orchestrate` | Default when an ask spans multiple workstreams (parent + specialists; named contract) |
 | `teach-to-skill` | Post-pass: after the same manual flow twice, offer skill-authoring once (named contract) |
+| `leave-machine-clean` | EXIT + on-demand reclaim: tear down local agent children; mid-session census kill (named contract) |
 | `factory-init` | Onboard a repo into the dark factory (AGENTS, close-loop, gates, then seat kits) |
 | `seat-kit` | Detect languages and seat matching language kits (repo gates + plugin) |
 | `factory-status` | One-table health sweep across factory repos and runners |

@@ -1,8 +1,8 @@
 {
   "name": "cursor-team-kit",
   "displayName": "Cursor Team Kit",
-  "version": "1.6.0",
-  "description": "Internal engineering team workflows for CI, code review, shipping, factory onboarding, one-shot task default, orwell-prose plain writing, figma-from-system UI default, product-debate default, outcome-repeat-back, results-not-homework, fleet-orchestrate, teach-to-skill, control-cli, control-ui, verify-this, test reliability, code cleanup, and work summaries. Designed to work without requiring third-party service integrations.",
+  "version": "1.7.0",
+  "description": "Internal engineering team workflows for CI, code review, shipping, factory onboarding, one-shot task default, orwell-prose plain writing, figma-from-system UI default, product-debate default, outcome-repeat-back, results-not-homework, fleet-orchestrate, teach-to-skill, leave-machine-clean, control-cli, control-ui, verify-this, test reliability, code cleanup, and work summaries. Designed to work without requiring third-party service integrations.",
   "author": {
     "name": "Cursor",
     "email": "plugins@cursor.com"
