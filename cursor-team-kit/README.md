@@ -10,6 +10,17 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 **Default (new product idea):** every new product idea opens a temporary product/design/engineering debate room (plain product name), captures requirements and the decision in writing, then closes the room before encode. Typing `/product-debate` is optional; the skill names the contract.
 
+
+**Default (repeat-back):** before any non-trivial ask, restate Goal / Constraints / Done means / Keep in plain words, then act. Typing `/outcome-repeat-back` is optional; the skill names the contract.
+
+**Default (exit):** leave a mergeable artifact (PR, brief, scorecard, verified claim). Never end with a "you should…" homework list. Typing `/results-not-homework` is optional; the skill names the contract.
+
+**Default (multi-workstream):** when an ask spans multiple workstreams, run parent + specialists with clear ownership, an ordered plate with merge holds, and parent waits on children. Verify before merge. Typing `/fleet-orchestrate` is optional; the skill names the contract.
+
+**Default (post-pass):** if the same manual flow recurred twice, offer skill-authoring / learn-from-demonstration once; drop if declined. Typing `/teach-to-skill` is optional; the skill names the contract.
+
+**Default (verify):** falsifiable "done" and substance merge claims need fresh `verify-this` evidence before ship.
+
 ## Installation
 
 ```bash
@@ -26,6 +37,10 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | `orwell-prose` | Default writing system for every prose surface (named contract; agents apply automatically, same shape as one-shot-task) |
 | `figma-from-system` | Default for ui:yes / Figma work (design system + approved keyframe, fail closed; named contract) |
 | `product-debate` | Default for every new product idea before encode (temporary debate room; named contract) |
+| `outcome-repeat-back` | Default preamble: restate Goal / Constraints / Done means / Keep, then act (named contract) |
+| `results-not-homework` | EXIT check: leave a mergeable artifact; never end with homework (named contract) |
+| `fleet-orchestrate` | Default when an ask spans multiple workstreams (parent + specialists; named contract) |
+| `teach-to-skill` | Post-pass: after the same manual flow twice, offer skill-authoring once (named contract) |
 | `factory-init` | Onboard a repo into the dark factory (AGENTS, close-loop, gates, then seat kits) |
 | `seat-kit` | Detect languages and seat matching language kits (repo gates + plugin) |
 | `factory-status` | One-table health sweep across factory repos and runners |
