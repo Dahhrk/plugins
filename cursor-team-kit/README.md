@@ -27,6 +27,14 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 **Default (verify):** falsifiable "done" and substance merge claims need fresh `verify-this` evidence before ship.
 
+**Default (factory gates):** non-trivial multi-file feature work passes `software-factory-gates` (Product, Architecture, Program Design, Build Order) with explicit user approval at each gate before implementation. Trivial one-liners skip. Typing `/software-factory-gates` is optional; the skill names the contract.
+
+**Default (design-eng):** UI and animation work applies `design-eng` taste and runs `review-animations` before ship. Vague motion feedback applies `animation-vocabulary` first. Typing `/design-eng` is optional; the skill names the contract.
+
+**Default (control loop):** new agent loop, overnight automation, or feedback-driven system applies `design-control-loop` (sensor/controller/actuator/disturbances) before implementation. Typing `/design-control-loop` is optional; the skill names the contract.
+
+**Default (agents-md):** AGENTS.md drift or rewrite applies `improve-agents-md` for structured instruction blocks. Typing `/improve-agents-md` is optional; the skill names the contract.
+
 ## Installation
 
 ```bash
@@ -72,6 +80,15 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | `deslop` | Remove AI-generated code slop and clean up code style |
 | `workflow-from-chats` | Extract durable working preferences from chats into skills, rules, or docs |
 | `thermo-nuclear-code-quality-review` | Run an unusually strict maintainability review (code-judo, 1k-line rule, spaghetti, boundaries) |
+| `software-factory-gates` | Default: four gates (Product, Architecture, Program Design, Build Order) before implementing non-trivial multi-file work (named contract) |
+| `design-control-loop` | Default: design agentic control loop (sensor/controller/actuator/disturbances) for iterated or overnight agent work (named contract) |
+| `improve-agents-md` | Default: rewrite AGENTS.md / CLAUDE.md with clear instruction blocks for agent adherence (named contract) |
+| `design-eng` | Default: design-engineering taste for UI and motion work (layout, spacing, animation, polish pass; named contract) |
+| `review-animations` | Pre-ship gate: review all animations for timing, easing, purpose, reduced-motion, and performance |
+| `animation-vocabulary` | Shared vocabulary for motion feedback; translates vague UI feedback to concrete properties |
+| `pick-ui-library` | Structured comparison to choose a UI component or animation library |
+| `find-animation-opportunities` | Scan UI for places where animation improves clarity, feedback, or delight |
+| `grill-me` | Stress-test a change before building or shipping; routes to pstack /interrogate |
 
 ### Agents
 
