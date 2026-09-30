@@ -13,7 +13,7 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 **Default (repeat-back):** before any non-trivial ask, restate Goal / Constraints / Done means / Keep in plain words, then act. Typing `/outcome-repeat-back` is optional; the skill names the contract.
 
-**Default (exit):** leave a mergeable artifact (PR, brief, scorecard, verified claim). Never end with a "you should…" homework list. Typing `/results-not-homework` is optional; the skill names the contract.
+**Default (exit):** leave a mergeable artifact (PR, brief, scorecard, verified claim). Never end with a “you should…” homework list. Typing `/results-not-homework` is optional; the skill names the contract.
 
 **Default (multi-workstream):** when an ask spans multiple workstreams, run parent + specialists with clear ownership, an ordered plate with merge holds, and parent waits on children. Verify before merge. Typing `/fleet-orchestrate` is optional; the skill names the contract.
 
@@ -21,11 +21,11 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 **Default (leave clean):** kill orphaned local agent children before you stop; mid-session `/leave-machine-clean` reclaims session orphans only. Cap parallel local workstreams; prefer remote for heavy verify. Typing `/leave-machine-clean` is optional; the skill names the contract.
 
-**Default (routine):** when an ask is recurring, scheduled, "let me know when", or about to be re-asked, create or update a routine/automation. Typing `/routine-by-default` is optional; the skill names the contract.
+**Default (routine):** when an ask is recurring, scheduled, “let me know when”, or about to be re-asked, create or update a routine/automation. Typing `/routine-by-default` is optional; the skill names the contract.
 
 **Default (harness):** capability / agent / bot / AI product work ships harnesses, evals, and delivery paths, not frontier training. Train only when Dark explicitly asks. Typing `/harness-not-training` is optional; the skill names the contract.
 
-**Default (verify):** falsifiable "done" and substance merge claims need fresh `verify-this` evidence before ship.
+**Default (verify):** falsifiable “done” and substance merge claims need fresh `verify-this` evidence before ship.
 
 **Default (factory gates):** non-trivial multi-file feature work passes `software-factory-gates` (Product, Architecture, Program Design, Build Order) with explicit user approval at each gate before implementation. Trivial one-liners skip. Typing `/software-factory-gates` is optional; the skill names the contract.
 
@@ -34,6 +34,8 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 **Default (control loop):** new agent loop, overnight automation, or feedback-driven system applies `design-control-loop` (sensor/controller/actuator/disturbances) before implementation. Typing `/design-control-loop` is optional; the skill names the contract.
 
 **Default (agents-md):** AGENTS.md drift or rewrite applies `improve-agents-md` for structured instruction blocks. Typing `/improve-agents-md` is optional; the skill names the contract.
+
+**Default (refactor-first):** non-trivial behavior changes in existing modules follow refactor-first (behavior-preserving cleanup with tests green, then the change on the clean structure). Never both in one unverifiable diff. Typing `/refactor-first` is optional; the skill names the contract.
 
 ## Installation
 
@@ -89,6 +91,8 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | `pick-ui-library` | Structured comparison to choose a UI component or animation library |
 | `find-animation-opportunities` | Scan UI for places where animation improves clarity, feedback, or delight |
 | `grill-me` | Stress-test a change before building or shipping; routes to pstack /interrogate |
+| `refactor-first` | Default: refactor then change on non-trivial behavior changes in existing modules (named contract) |
+| `inference-perf` | Operational checks for LLM inference serving performance (TTFT, TPOT, KV cache, parallelism, quantization) |
 
 ### Agents
 
