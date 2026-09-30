@@ -35,6 +35,8 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 **Default (agents-md):** AGENTS.md drift or rewrite applies `improve-agents-md` for structured instruction blocks. Typing `/improve-agents-md` is optional; the skill names the contract.
 
+**Default (refactor-first):** non-trivial behavior changes in existing modules follow refactor-first (behavior-preserving cleanup with tests green, then the change on the clean structure). Never both in one unverifiable diff. Typing `/refactor-first` is optional; the skill names the contract.
+
 ## Installation
 
 ```bash
@@ -89,6 +91,8 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | `pick-ui-library` | Structured comparison to choose a UI component or animation library |
 | `find-animation-opportunities` | Scan UI for places where animation improves clarity, feedback, or delight |
 | `grill-me` | Stress-test a change before building or shipping; routes to pstack /interrogate |
+| `refactor-first` | Default: refactor then change on non-trivial behavior changes in existing modules (named contract) |
+| `inference-perf` | Operational checks for LLM inference serving performance (TTFT, TPOT, KV cache, parallelism, quantization) |
 
 ### Agents
 

@@ -18,6 +18,7 @@ Public plugin marketplace (`Dahhrk/plugins`). Kitchen is `dark-factory` - do not
 14. Default: UI and animation work applies `design-eng` taste and runs `review-animations` before ship. Vague motion feedback applies `animation-vocabulary` first. Agents start here automatically; the skill names the contract.
 15. Default: new agent loop, overnight automation, or feedback-driven system applies `design-control-loop` (sensor/controller/actuator/disturbances) before implementation. Agents start here automatically; `/design-control-loop` names the contract.
 16. Default: AGENTS.md drift or rewrite applies `improve-agents-md` for structured instruction blocks. Agents start here automatically; `/improve-agents-md` names the contract.
+17. Default: non-trivial behavior changes in existing modules follow refactor-first (behavior-preserving cleanup with tests green, then the change on the clean structure). Never both in one unverifiable diff. Agents start here automatically; `/refactor-first` names the contract.
 17. Gate: `node scripts/validate-plugins.mjs` (ajv schema check on marketplace.json + plugin.json files).
 18. One verifiable unit per PR. Author does not merge on own verdict.
 12. Respect `.cursor/dune.md` and `BUGBOT.md`.
