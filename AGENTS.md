@@ -19,6 +19,10 @@ Public plugin marketplace (`Dahhrk/plugins`). Kitchen is `dark-factory` - do not
 15. Default: new agent loop, overnight automation, or feedback-driven system applies `design-control-loop` (sensor/controller/actuator/disturbances) before implementation. Agents start here automatically; `/design-control-loop` names the contract.
 16. Default: AGENTS.md drift or rewrite applies `improve-agents-md` for structured instruction blocks. Agents start here automatically; `/improve-agents-md` names the contract.
 17. Default: non-trivial behavior changes in existing modules follow refactor-first (behavior-preserving cleanup with tests green, then the change on the clean structure). Never both in one unverifiable diff. Agents start here automatically; `/refactor-first` names the contract.
+- Default: designing or reviewing public APIs, libraries, component props, CLI flags, or SDK surfaces applies `progressive-disclosure` (zero-config default, complexity opt-in, call-site-first, four layers). Agents start here automatically; `/progressive-disclosure` names the contract.
+- Default: public seams apply `pit-of-success` (obvious call correct; misuse hard; footgun test on the seam). Agents start here automatically; `/pit-of-success` names the contract.
+- Default: reshaping existing code toward a known target applies `zero-tech-debt` (delete dead compatibility; rework from the intended end state). Overlap with `refactor-first`: that skill owns work order; this skill owns end-state reshape. Agents start here automatically; `/zero-tech-debt` names the contract.
+- Default: user-facing feature work applies `ux-flow-plan` (current vs desired UX flow trees, then file/function anchors). Overlap with `figma-from-system` / `design-eng`: those own Figma/system and taste; this owns flow trees before code. Agents start here automatically; `/ux-flow-plan` names the contract.
 17. Gate: `node scripts/validate-plugins.mjs` (ajv schema check on marketplace.json + plugin.json files).
 18. One verifiable unit per PR. Author does not merge on own verdict.
 12. Respect `.cursor/dune.md` and `BUGBOT.md`.
