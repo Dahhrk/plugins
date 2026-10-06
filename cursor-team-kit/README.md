@@ -93,6 +93,7 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | `grill-me` | Stress-test a change before building or shipping; routes to pstack /interrogate |
 | `refactor-first` | Default: refactor then change on non-trivial behavior changes in existing modules (named contract) |
 | `inference-perf` | Operational checks for LLM inference serving performance (TTFT, TPOT, KV cache, parallelism, quantization) |
+| `perf-watch` | Routine that watches production traces and metrics; on a regression a worker reproduces on staging, fixes, and opens a draft PR with before and after numbers |
 
 ### Agents
 
