@@ -52,7 +52,9 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 **Default (event hooks):** event-hook or before-gate automation applies `event-hooks` (distinct from `software-factory-gates`). Typing `/event-hooks` is optional; the skill names the contract.
 
 **Default (fleet / desk drive):** multi-workstream asks and desk agent drive (prompt / wait / loop / hand-off / review; never answer for the human) stay on `fleet-orchestrate`. No second orchestrate skill.
+
 **Default (encode-in-codebase):** durable corrections and conventions go in CODEOWNERS, AGENTS.md, repo skills, BUGBOT.md, or CI. Typing `/encode-in-codebase` is optional; the skill names the contract.
+
 
 ## Installation
 
