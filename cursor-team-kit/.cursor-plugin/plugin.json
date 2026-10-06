@@ -1,8 +1,8 @@
 {
   "name": "cursor-team-kit",
   "displayName": "Cursor Team Kit",
-  "version": "1.11.0",
-  "description": "Internal engineering team workflows for CI, code review, shipping, factory onboarding, one-shot task default, orwell-prose plain writing, figma-from-system UI default, product-debate default, outcome-repeat-back, results-not-homework, fleet-orchestrate, teach-to-skill, leave-machine-clean, routine-by-default, harness-not-training, control-cli, control-ui, verify-this, software-factory-gates, design-control-loop, improve-agents-md, design-eng, review-animations, animation-vocabulary, pick-ui-library, find-animation-opportunities, grill-me, refactor-first, progressive-disclosure, pit-of-success, zero-tech-debt, ux-flow-plan, code-refactor-review, prepare-branch-context, create-draft-pr, parallel-task, parallel-pr-followup, e2e-verify, inference-perf, test reliability, code cleanup, and work summaries. Designed to work without requiring third-party service integrations.",
+  "version": "1.12.0",
+  "description": "Internal engineering team workflows for CI, code review, shipping, factory onboarding, one-shot task default, orwell-prose plain writing, figma-from-system UI default, product-debate default, outcome-repeat-back, results-not-homework, fleet-orchestrate, teach-to-skill, leave-machine-clean, routine-by-default, harness-not-training, control-cli, control-ui, verify-this, software-factory-gates, design-control-loop, improve-agents-md, design-eng, review-animations, animation-vocabulary, pick-ui-library, find-animation-opportunities, grill-me, refactor-first, progressive-disclosure, pit-of-success, zero-tech-debt, ux-flow-plan, code-refactor-review, prepare-branch-context, create-draft-pr, parallel-task, parallel-pr-followup, e2e-verify, inference-perf, perf-watch, test reliability, code cleanup, and work summaries. Designed to work without requiring third-party service integrations.",
   "author": {
     "name": "Cursor",
     "email": "plugins@cursor.com"

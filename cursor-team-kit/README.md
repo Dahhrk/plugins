@@ -111,6 +111,7 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | `parallel-pr-followup` | Parallel follow-up on an existing PR/branch (no ga/tmux/Pi) |
 | `e2e-verify` | Require a real e2e path for end-to-end product claims (pairs with verify-this) |
 | `inference-perf` | Operational checks for LLM inference serving performance (TTFT, TPOT, KV cache, parallelism, quantization) |
+| `perf-watch` | Routine that watches production traces and metrics; on a regression a worker reproduces on staging, fixes, and opens a draft PR with before and after numbers |
 
 ### Agents
 
