@@ -15,7 +15,7 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 **Default (exit):** leave a mergeable artifact (PR, brief, scorecard, verified claim). Never end with a "you should…" homework list. Typing `/results-not-homework` is optional; the skill names the contract.
 
-**Default (multi-workstream):** when an ask spans multiple workstreams, run parent + specialists with clear ownership, an ordered plate with merge holds, and parent waits on children. Verify before merge. Typing `/fleet-orchestrate` is optional; the skill names the contract.
+**Default (multi-workstream):** when an ask spans multiple workstreams, or when driving other agents on a desk (prompt / wait / loop / hand-off / review; never answer for the human), run parent + specialists with clear ownership, an ordered plate with merge holds, and parent waits on children. Verify before merge. Typing `/fleet-orchestrate` is optional; the skill names the contract.
 
 **Default (post-pass):** if the same manual flow recurred twice, offer skill-authoring / learn-from-demonstration once; drop if declined. Typing `/teach-to-skill` is optional; the skill names the contract.
 
@@ -45,6 +45,14 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 **Default (ux-flow-plan):** user-facing feature work applies ux-flow-plan (current vs desired UX flow trees, then file/function anchors). Typing `/ux-flow-plan` is optional; the skill names the contract.
 
+**Default (desk boxes):** box / worktree / session / port / desk-config asks apply `desk-boxes`. Typing `/desk-boxes` is optional; the skill names the contract.
+
+**Default (local preview):** UI or page preview asks apply `local-preview` when a desk is present (reserved port + desk UI); otherwise fall back to `control-ui`. Typing `/local-preview` is optional; the skill names the contract.
+
+**Default (event hooks):** event-hook or before-gate automation applies `event-hooks` (distinct from `software-factory-gates`). Typing `/event-hooks` is optional; the skill names the contract.
+
+**Default (fleet / desk drive):** multi-workstream asks and desk agent drive (prompt / wait / loop / hand-off / review; never answer for the human) stay on `fleet-orchestrate`. No second orchestrate skill.
+
 ## Installation
 
 ```bash
@@ -63,7 +71,7 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | `product-debate` | Default for every new product idea before encode (temporary debate room; named contract) |
 | `outcome-repeat-back` | Default preamble: restate Goal / Constraints / Done means / Keep, then act (named contract) |
 | `results-not-homework` | EXIT check: leave a mergeable artifact; never end with homework (named contract) |
-| `fleet-orchestrate` | Default when an ask spans multiple workstreams (parent + specialists; named contract) |
+| `fleet-orchestrate` | Default for multi-workstream and desk agent drive (parent + specialists; never answer for the human; named contract) |
 | `teach-to-skill` | Post-pass: after the same manual flow twice, offer skill-authoring once (named contract) |
 | `leave-machine-clean` | EXIT + on-demand reclaim: tear down local agent children; mid-session census kill (named contract) |
 | `routine-by-default` | Default: recurring / scheduled / monitor asks become a routine (named contract) |
@@ -104,6 +112,10 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | `pit-of-success` | Default: make the obvious call correct; footgun test on public seams (named contract) |
 | `zero-tech-debt` | Default: reshape toward intended end state; delete dead compatibility (named contract) |
 | `ux-flow-plan` | Default: UX flow trees (current vs desired) then file/function anchors (named contract) |
+| `desk-boxes` | Default: box / worktree / session / port / desk-config orientation (named contract) |
+| `local-preview` | Default: run worktree server on reserved port and open in desk UI (named contract) |
+| `event-hooks` | Default: event hooks and before-gates (named contract; not software-factory-gates) |
+| `agent-cli-lanes` | Available: install/wire Cursor, Claude Code, Codex, Gemini CLI, OpenCode, Devin |
 | `code-refactor-review` | Review diffs/PRs for reuse, composition, consistency, and slop |
 | `prepare-branch-context` | Read-only branch catch-up (diff from main, commits, related PR) |
 | `create-draft-pr` | Commit, push, open draft PR with Summary/Problem/(UX Flow)/Solution |
