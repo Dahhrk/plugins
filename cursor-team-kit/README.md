@@ -37,6 +37,14 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 
 **Default (refactor-first):** non-trivial behavior changes in existing modules follow refactor-first (behavior-preserving cleanup with tests green, then the change on the clean structure). Never both in one unverifiable diff. Typing `/refactor-first` is optional; the skill names the contract.
 
+**Default (progressive-disclosure):** designing or reviewing public APIs, libraries, component props, CLI flags, or SDK surfaces applies progressive-disclosure (zero-config default, complexity opt-in, call-site-first, four layers). Typing `/progressive-disclosure` is optional; the skill names the contract.
+
+**Default (pit-of-success):** public seams apply pit-of-success (obvious call correct; misuse hard; footgun test on the seam). Typing `/pit-of-success` is optional; the skill names the contract.
+
+**Default (zero-tech-debt):** reshaping existing code toward a known target applies zero-tech-debt (delete dead compatibility; rework from the intended end state). Typing `/zero-tech-debt` is optional; the skill names the contract.
+
+**Default (ux-flow-plan):** user-facing feature work applies ux-flow-plan (current vs desired UX flow trees, then file/function anchors). Typing `/ux-flow-plan` is optional; the skill names the contract.
+
 ## Installation
 
 ```bash
@@ -92,6 +100,16 @@ Internal-style workflows for CI, code review, shipping, and test reliability. Th
 | `find-animation-opportunities` | Scan UI for places where animation improves clarity, feedback, or delight |
 | `grill-me` | Stress-test a change before building or shipping; routes to pstack /interrogate |
 | `refactor-first` | Default: refactor then change on non-trivial behavior changes in existing modules (named contract) |
+| `progressive-disclosure` | Default: public-seam design with four-layer progressive disclosure (named contract) |
+| `pit-of-success` | Default: make the obvious call correct; footgun test on public seams (named contract) |
+| `zero-tech-debt` | Default: reshape toward intended end state; delete dead compatibility (named contract) |
+| `ux-flow-plan` | Default: UX flow trees (current vs desired) then file/function anchors (named contract) |
+| `code-refactor-review` | Review diffs/PRs for reuse, composition, consistency, and slop |
+| `prepare-branch-context` | Read-only branch catch-up (diff from main, commits, related PR) |
+| `create-draft-pr` | Commit, push, open draft PR with Summary/Problem/(UX Flow)/Solution |
+| `parallel-task` | Parallel kickoff on a fresh branch via cloud agent or fleet workstream (no ga/tmux/Pi) |
+| `parallel-pr-followup` | Parallel follow-up on an existing PR/branch (no ga/tmux/Pi) |
+| `e2e-verify` | Require a real e2e path for end-to-end product claims (pairs with verify-this) |
 | `inference-perf` | Operational checks for LLM inference serving performance (TTFT, TPOT, KV cache, parallelism, quantization) |
 | `perf-watch` | Routine that watches production traces and metrics; on a regression a worker reproduces on staging, fixes, and opens a draft PR with before and after numbers |
 
